@@ -1,1 +1,157 @@
-<p>contact-us works!</p>
+<!-- contact-us.component.html -->
+<section class="py-4" id="contact-us">
+  <div class="container py-4">
+    <div class="row gy-3 gy-md-4 gy-lg-0 align-items-md-center">
+      <div class="col-12 col-lg-6">
+        <div class="row justify-content-xl-center">
+          <div class="col-12 col-xl-11">
+            <h2 class="h1 mb-3">Get in touch</h2>
+            <p class="lead fs-4 text-secondary mb-5">
+              We're always on the lookout to work with new clients. If you're
+              interested in working with us, please get in touch in one of the
+              following ways.
+            </p>
+            <div class="d-flex mb-5">
+              <div class="me-4 text-primary">
+                <i class="bi bi-geo" style="font-size: 32px"></i>
+              </div>
+              <div>
+                <h3 class="mb-3">Address</h3>
+                <address class="mb-0 text-secondary">
+                  8014 Edith Blvd NE, Albuquerque, New York, United States
+                </address>
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-12 col-sm-6">
+                <div class="d-flex mb-5 mb-sm-0">
+                  <div class="me-4 text-primary">
+                    <i
+                      class="bi bi-telephone-outbound"
+                      style="font-size: 32px"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3 class="mb-3">Phone</h3>
+                    <p class="mb-0">
+                      <a
+                        class="link-secondary text-decoration-none"
+                        href="tel:+15057922430"
+                        >(505) 792-2430</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="d-flex mb-0">
+                  <div class="me-4 text-primary">
+                    <i class="bi bi-envelope-at" style="font-size: 32px"></i>
+                  </div>
+                  <div>
+                    <h3 class="mb-3">E-Mail</h3>
+                    <p class="mb-0">
+                      <a
+                        class="link-secondary text-decoration-none"
+                        href="mailto:demo@yourdomain.com"
+                        >example&#64;yourdomain.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="me-4 text-primary">
+                <i class="bi bi-alarm" style="font-size: 32px"></i>
+              </div>
+              <div>
+                <h3 class="mb-3">Opening Hours</h3>
+                <div class="d-flex mb-1">
+                  <p class="text-secondary fw-bold mb-0 me-5">Mon - Fri</p>
+                  <p class="text-secondary mb-0">9am - 5pm</p>
+                </div>
+                <div class="d-flex">
+                  <p class="text-secondary fw-bold mb-0 me-5">Sat - Sun</p>
+                  <p class="text-secondary mb-0">9am - 2pm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="bg-white border rounded shadow-sm overflow-hidden">
+          <form
+            [formGroup]="contactForm"
+            (ngSubmit)="onSubmit()"
+            class="p-4 p-xl-5 border rounded shadow"
+          >
+            <div class="form-group mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                id="name"
+                formControlName="name"
+                class="form-control"
+                placeholder="Your Name"
+                [ngClass]="{ 'is-invalid': name.invalid && name.touched }"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="name.invalid && name.touched"
+              >
+                Name is required and must be at least 3 characters.
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                formControlName="email"
+                class="form-control"
+                placeholder="example&#64;yourdomain.com"
+                [ngClass]="{ 'is-invalid': email.invalid && email.touched }"
+              />
+              <div
+                class="invalid-feedback"
+                *ngIf="email.invalid && email.touched"
+              >
+                Enter a valid email address.
+              </div>
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                id="message"
+                formControlName="message"
+                class="form-control"
+                rows="5"
+                placeholder="Your Message"
+                [ngClass]="{ 'is-invalid': message.invalid && message.touched }"
+              ></textarea>
+              <div
+                class="invalid-feedback"
+                *ngIf="message.invalid && message.touched"
+              >
+                Message is required and must be at least 10 characters.
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary w-100"
+              [disabled]="contactForm.invalid"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
