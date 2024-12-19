@@ -1,0 +1,34 @@
+@use "../../../styles/variables" as v;
+
+about-us-section {
+  h2 {
+    color: #000;
+    font-weight: 900;
+  }
+
+  p {
+    color: #000;
+    font-weight: 300;
+  }
+
+  span.text-muted {
+    color: #555;
+    font-weight: 600;
+  }
+
+  background-color: v.$secondary-color;
+  padding: 50px 0;
+
+  .about-img-container {
+    border: 5px solid #ddd;
+    border-radius: 15px;
+    height: auto;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+}
