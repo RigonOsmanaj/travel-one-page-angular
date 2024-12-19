@@ -1,0 +1,12 @@
+@use "../../../styles/variables" as v;
+
+.footer-brand {
+  color: v.$black_color;
+  font-family: v.$font-family;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: v.$black_color;
+  }
+}

@@ -1,0 +1,37 @@
+@use "../../../styles/variables" as v;
+
+.navbar {
+  &-light {
+    background-color: v.$navbar-bg; // White background
+    border-color: v.$navbar-border-color;
+    padding: v.$navbar-padding;
+
+    .navbar-brand {
+      color: v.$black_color;
+      font-family: v.$font-family;
+      text-transform: uppercase;
+
+      &:hover {
+        color: v.$highlight;
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: v.$black_color;
+          font-family: v.$font-family;
+          text-transform: uppercase;
+          letter-spacing: v.$letter-spacing;
+          font-size: v.$font-size-large;
+          margin: 0 1rem;
+
+          &:focus,
+          &:hover {
+            color: v.$highlight;
+          }
+        }
+      }
+    }
+  }
+}

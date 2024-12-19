@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Paris, France",
+    "imageUrl": "../../../assets/images/paris.jpg",
+    "description": "Explore iconic landmarks like the Eiffel Tower, Louvre Museum, and charming streets filled with history and culture.",
+    "subtitle": "The City of Lights"
+  },
+  {
+    "id": 2,
+    "title": "Tokyo, Japan",
+    "imageUrl": "../../../assets/images/tokyo.jpg",
+    "description": "Dive into the vibrant culture, tech, and fashion scene. Visit the Shibuya Crossing, and indulge in sushi.",
+    "subtitle": "A Modern Metropolis"
+  },
+  {
+    "id": 3,
+    "title": "Sydney, Australia",
+    "imageUrl": "../../../assets/images/sydney.jpg",
+    "description": "Experience the stunning Opera House, Bondi Beach, and enjoy world-class food and scenic views of the harbor.",
+    "subtitle": "Beaches and Iconic Landmarks"
+  },
+  {
+    "id": 4,
+    "title": "New York City, USA",
+    "imageUrl": "../../../assets/images/new-york.jpg",
+    "description": "Discover iconic attractions such as Times Square, Central Park, the Statue of Liberty, and an incredible skyline.",
+    "subtitle": "The Big Apple"
+  },
+  {
+    "id": 5,
+    "title": "Rio de Janeiro, Brazil",
+    "imageUrl": "../../../assets/images/rio-de-janeiro.jpg",
+    "description": "Experience the lively culture, stunning beaches like Copacabana.",
+    "subtitle": "Vibrant Beaches & Carnival"
+  },
+  {
+    "id": 6,
+    "title": "Cape Town, South Africa",
+    "imageUrl": "../../../assets/images/cape-town.jpg",
+    "description": "Explore the stunning Table Mountain, go on a safari, and enjoy the vibrant culture and incredible food.",
+    "subtitle": "Natural Beauty & Adventure"
+  }
+]
