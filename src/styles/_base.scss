@@ -57,3 +57,15 @@ p {
     }
   }
 }
+
+.login-page,
+.signup-page,
+.reset-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 15px;
+  background: v.$secondary-color;
+  overflow: hidden;
+}
