@@ -1,0 +1,39 @@
+@use "../../../styles/variables" as v;
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: v.$primary-color;
+}
+
+.table {
+  th {
+    background-color: v.$primary-color;
+    color: #fff;
+  }
+
+  .btn-primary {
+    background-color: v.$primary-color;
+    border-color: v.$primary-color;
+
+    &:hover {
+      background-color: v.$accent-color;
+      border-color: v.$accent-color;
+    }
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+
+    &:hover {
+      background-color: #c82333;
+      border-color: #bd2130;
+    }
+  }
+}

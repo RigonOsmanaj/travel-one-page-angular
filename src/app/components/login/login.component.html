@@ -1,0 +1,61 @@
+<body class="login-page">
+  <div class="wrapper">
+    <div class="title">Welcome back<span></span></div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <i class="bi bi-person"></i>
+        <input
+          type="text"
+          placeholder="Email or Phone"
+          formControlName="email"
+          class="form-control"
+        />
+        <!-- Email validation message -->
+        <div
+          *ngIf="
+            loginForm.get('email')?.invalid && loginForm.get('email')?.touched
+          "
+          class="text-danger"
+        >
+          Please enter a valid email address.
+        </div>
+      </div>
+      <div class="row">
+        <i class="bi bi-lock"></i>
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          class="form-control"
+        />
+        <!-- Password validation message -->
+        <div
+          *ngIf="
+            loginForm.get('password')?.invalid &&
+            loginForm.get('password')?.touched
+          "
+          class="text-danger"
+        >
+          Password is required and must be at least 6 characters.
+        </div>
+      </div>
+      <div class="pass">
+        <a href="reset-password.html">Forgot password?</a>
+      </div>
+      <div class="button">
+        <input
+          type="submit"
+          class="btn btn-primary"
+          value="Login"
+          [disabled]="loginForm.invalid"
+        />
+      </div>
+      <div *ngIf="loginError" class="text-danger">
+        {{ loginError }}
+      </div>
+      <div class="signup-link">
+        Not a member?<a routerLink="/signup">Register</a>
+      </div>
+    </form>
+  </div>
+</body>
