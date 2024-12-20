@@ -50,6 +50,9 @@
           [disabled]="loginForm.invalid"
         />
       </div>
+      <div *ngIf="loginError" class="text-danger">
+        {{ loginError }}
+      </div>
       <div class="signup-link">
         Not a member?<a routerLink="/signup">Register</a>
       </div>

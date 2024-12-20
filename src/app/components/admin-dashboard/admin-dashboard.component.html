@@ -1,0 +1,29 @@
+
+<div class="container mt-5">
+  <h2 class="mb-4">Admin Dashboard</h2>
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let user of users; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user.fullName }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" (click)="editUser(user)">
+            Edit
+          </button>
+          <button class="btn btn-sm btn-danger" (click)="deleteUser(user)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

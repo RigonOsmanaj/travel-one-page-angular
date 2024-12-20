@@ -1,0 +1,2 @@
+# Ignore all HTML files in the components directory
+src/app/components/**/*.html
